@@ -1,0 +1,22 @@
+<mat-toolbar id="catmash-menu" color="primary">
+
+  <span class="fill-remaining-space" routerLink="/choose" routerLinkActive="active" >
+      <img id="catmash-menu-logo" src="assets/img/logo.png" alt="logo" />
+      {{ title }}
+  </span>
+  <span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="/choose" routerLinkActive="active">
+        <mat-icon>pets</mat-icon>
+        <span>Choose you favorite cat</span>
+      </button>
+      <button mat-menu-item routerLink="/results" routerLinkActive="active">
+        <mat-icon>subject</mat-icon>
+        <span>View results</span>
+      </button>
+    </mat-menu>
+  </span>
+</mat-toolbar>

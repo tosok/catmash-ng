@@ -1,0 +1,18 @@
+<div id="catmash-list">
+  <ng-catmash-loader [hidden]="!loading"></ng-catmash-loader>
+  <div [hidden]="loading">
+    <mat-grid-list cols="2" >
+      <mat-grid-tile
+        *ngFor="let cat of cats"
+        colspan=1
+        rowspan=1>
+        <mat-card class="catmash-card">
+          <img mat-card-image src="{{ cat.url }}" alt="{{ cat.id }}">
+          <mat-card-content>
+            <p>{{cat.rank}} vote{{ cat.rank > 1 ? 's' : ''}}</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
